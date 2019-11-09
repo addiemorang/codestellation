@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
+from django.views.generic import TemplateView  # Import TemplateView
 from django.views.generic.base import TemplateView
 
 
@@ -38,3 +39,9 @@ def signup(request):
         user = User.objects.get(pk=user_id)
         user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
         user.save()
+def test_template(request):
+    return render(request, 'index.html')
+
+
+class HomePageView(TemplateView):
+    template_name = "index.html"
