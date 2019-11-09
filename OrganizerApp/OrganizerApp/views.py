@@ -3,9 +3,21 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
+from django.views.generic.base import TemplateView
 
-# Create your views here.
+class HomePageView(TemplateView):
+    template_name = 'home.html'
 
+def mode(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return redirect('home')
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
 
 def signup(request):
     if request.method == 'POST':
