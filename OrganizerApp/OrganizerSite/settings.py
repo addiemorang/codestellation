@@ -57,7 +57,8 @@ ROOT_URLCONF = 'OrganizerSite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'OrganizerApp/templates'),
+                os.path.join(BASE_DIR, 'OrganizerApp/templates/registration')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
