@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'codestellationdb',
         'HOST': 'mongodb+srv://' + username +  ':' + password +
-        '@cluster0-wyfzu.gcp.mongodb.net/test?retryWrites=true&w=majority'
+        '@cluster0-wyfzu.gcp.mongodb.net/codestellationdb'
     }
 }
 
