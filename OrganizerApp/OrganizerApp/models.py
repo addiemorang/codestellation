@@ -8,13 +8,18 @@ class Profile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(null=True, blank=True)
+    first_name = models.TextField(max_length=50, blank=True)
+    last_name = models.TextField(max_length=50, blank=True)
 
-class Group(models.Group):
-    name = models.CharField(_('name'), max_length=80, unique=True)
-    permissions = models.ManyToManyField(Permission,
-        verbose_name=_('permissions'), blank=True)
+class Group(models.Model):
+    name = models.TextField(max_length=80, unique=True)
+    members = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    objects = GroupManager()
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
 
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):

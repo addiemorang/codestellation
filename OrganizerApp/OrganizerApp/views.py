@@ -5,19 +5,18 @@ from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
 from django.views.generic.base import TemplateView
 
+
+
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-def mode(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        return redirect('home')
-    else:
-        form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+    def create_group(request):
+        if request.method == 'POST':
+            form = GroupForm(request.POST)
+            if form.is_valid():
+                group = form.save()
+                group.save()
+                return redirect('home')
 
 def signup(request):
     if request.method == 'POST':
@@ -34,3 +33,8 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+    def update_profile(request, user_id):
+        user = User.objects.get(pk=user_id)
+        user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
+        user.save()

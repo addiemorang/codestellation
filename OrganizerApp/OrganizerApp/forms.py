@@ -1,10 +1,21 @@
 from django import forms
+from .models import Group
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
 class SignUpForm(UserCreationForm):
-    birth_date = forms.DateField(help_text='Required. Format: YYYY-MM-DD')
+    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
 
     class Meta:
         model = User
-        fields = ('username', 'birth_date', 'password1', 'password2', )
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
+
+class  GroupForm(forms.Form):
+    name = forms.CharField(label='Group name', max_length=30)
+    
+    class Meta:
+        model = Group
+        fields = ('name', 'members')
