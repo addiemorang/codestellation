@@ -67,3 +67,10 @@ def profile(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def group(request):
+    return render(request, 'group.html')
+
+
+def groups(request):
+    return render(request, 'groups.html')
