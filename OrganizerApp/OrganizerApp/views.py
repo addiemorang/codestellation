@@ -66,6 +66,16 @@ class SampleView(TemplateView):
 #     template_name = "profile.html"
 
 class GroupView(TemplateView):
+    # list = [['Email Prof. Antonella', '@amorang', '11/30/19'],
+    #         ['Print out flyers', '@lwingard', '11/26/19'],
+    #         ['Create agenda', '@ellie', '11/20/19'],
+    #         ]
+    # action1 = render(request, 'actionitem.html', {'desciption': list[0][0], 'assignee': list[0][1], 'date': list[0][2]})
+    # action2 = render(request, 'actionitem.html', {'desciption': list[1][0], 'assignee': list[1][1], 'date': list[1][2]})
+    # action3 = render(request, 'actionitem.html', {'desciption': list[2][0], 'assignee': list[2][1], 'date': list[2][2]})
+    #
+    #
+    # return render(request, group.html, {'action1': action1,'action2': action2,'action3': action3})
     template_name = "group.html"
 
     def req_analyze(request):
