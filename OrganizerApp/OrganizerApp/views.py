@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
+from OrganizerApp.forms import GroupForm
 from django.views.generic import TemplateView  # Import TemplateView
 from django.views.generic.base import TemplateView
 
@@ -20,13 +21,6 @@ from django.db import models
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-    # def create_group(request):
-    #     if request.method == 'POST':
-    #         form = GroupForm(request.POST)
-    #         if form.is_valid():
-    #             group = form.save()
-    #             group.save()
-    #             return redirect('home')
 
 
     # def notify_login():
@@ -60,9 +54,19 @@ def signup(request):
         user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
         user.save()
 
+def create_group(request):
+    #if request.method == 'POST':
+    return redirect('login')
+        # #name = request.POST.get('name')
+        # form = GroupForm(request.POST)
+        # if form.is_valid():
+        #     group = form.save()
+        #     group.save()
+        #     return redirect('home')
+        # else:
+        #     return redirect('login')
 
-# def profile(request):
-#     return redirect('profile.html')
+
 class CalendarView(TemplateView):
     template_name = "calendars.html"
     # if request.method == 'POST':
