@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="row" style="flex-direction: row;">
-    <div class="col-md-8">
-        <div class="row" style="flex-direction: column;">
-            <div>Activity</div>
-            <div>Not Started In Progress On Hold Complete</div>
-            <div class="row" style="flex-direction: row;">
-                <div>{% include "tableofactionitems.html" %}</div>
-                <div>{% include "tableofactionitems.html" %}</div>
+<div class="row" style="flex-direction: row;margin-left: 0; margin-right: 0;background-color: #f8f9fa;">
+    <div class="col-md-6">
+        <div class="row" style="flex-direction: column;margin-left: 0; margin-right: 0; justify-content: center;">
+            <h1 style="text-align: center;">Activity</h1>
+            <div class="row" style="flex-direction: row;  padding-bottom: 15; width: 70%; margin-left: 15%;">
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">Not Started</button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">In Progress</button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">On Hold</button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">Completed</button>
             </div>
+           
+            <div>{% include "tableofactionitems.html" %}</div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="row" style="flex-direction: column;"> 
-            <div class="row" style="flex-direction: column;">
-                <h5>Unassigned Action Items</h5>
+    <div class="col-md-6">
+        <div class="row" style="flex-direction: column;margin-left: 0; margin-right: 0;"> 
+            <div class="row" style="flex-direction: column; justify-content: center;margin-left: 0; margin-right: 0; text-align: center;">
+                <h2>Unassigned Action Items</h2>
                 <div>{% include "tableofactionitems.html" %}</div>
             </div>
             <div>
