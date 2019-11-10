@@ -1,46 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
-<link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
-  rel="stylesheet">
-
-<link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/animate.css' %}">
-
-<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-
-<link rel="stylesheet" href="{% static 'css/aos.css' %}">
-
-<link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
-
-<link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/nouislider.css' %}">
-
-
-<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
-<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 {% block title %}Calendars{% endblock %}
 
 {% block content %}
 <!DOCTYPE html>
 
 <html>
-  <h2>User's Calendars</h2>
+
+<div class="row" style="flex-direction: column; justify-content: center;">
+  <!-- <h2>User's Calendars</h2>
 
   <h2>{{ user.get_full_name }}</h2>
-<ul>
-  <li>Username: {{ user.username }}</li>
-</ul
-<form action="/action_page.php" style="background-color:#E6E6FA" align="right">
-  <input type="text" name="url" value="" align="right">
+  <ul>
+    <li>Username: {{ user.username }}</li>
+  </ul  -->
+  <form action="/action_page.php" style="background-color:#E6E6FA, width=50%" align="right">
+  <input type="text" class="form-control" style="width: 80%; margin-left: 15;" placeholder="Enter when2meet url to add to calendars" name="url" value="" align="right">
 
-  <input type="submit" value="+" >
-</form>
+  <input type="submit" style="margin-right: 230" value="+">
+  </form>
 
-<iframe width=100% height=100% src="https://www.when2meet.com/?8321965-cbJct"></iframe>
+  <!-- <iframe width=100% height=100% src="https://www.when2meet.com/?8321965-cbJct"></iframe> -->
+  <div class="row" style="flex-direction: row; justify-content: space-evenly; padding-top: 15;">
+    <div style="width: 40%;">{% include "calendar.html" %}</div>
+    <div style="width: 40%;">{% include "calendar.html" %}</div>
+  </div>
+
+</div>
+  
 {% endblock %}
 
 
