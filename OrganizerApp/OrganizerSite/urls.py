@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^index/$', views.SampleView.as_view(), name='index'),
     url(r'^home/$', views.HomePageView.as_view(), name='home'),
+    url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
     url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     #url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 ]

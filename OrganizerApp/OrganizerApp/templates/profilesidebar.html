@@ -1,4 +1,8 @@
+
 {% load static %}
+
+{% block content %}
+<!DOCTYPE html>
 <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
     rel="stylesheet">
 
@@ -20,17 +24,25 @@
 <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<!DOCTYPE html>
-<html>
 
-<div>
-    {% include "navbar.html" %}
+<div class="col-md-4 text-center">
+    <div class="image-wrap">
+        <img src="{% static 'images/image-3.jpg' %}" alt="Thumbnail Image"
+            class="img-raised rounded-circle thumbnail img-fluid image">
+        <div class="text">
+            <div class="img" style="background-image: url(images/person.jpg);"></div>
+            <h5 style="margin-right: 60">Username</h5>
+        </div>
+    </div>
+    
 </div>
-{% block content %}
+<div>{% include "tableofactionitems.html" %}</div>
+
+
 {% endblock %}
 
-</html>
 
+</html>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>

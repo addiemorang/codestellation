@@ -1,4 +1,7 @@
 {% load static %}
+
+{% block content %}
+<!DOCTYPE html>
 <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
     rel="stylesheet">
 
@@ -20,16 +23,27 @@
 <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<!DOCTYPE html>
-<html>
 
-<div>
-    {% include "navbar.html" %}
-</div>
-{% block content %}
+<section class="ftco-section" id="notifications">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="padding-left: 140;">My Action Items</h2>
+                <div >
+                    {% include "actionitem.html" %}
+                </div>
+                <div>
+                    {% include "actionitem.html" %}
+                </div>
+                <div>
+                    {% include "actionitem.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
-
-</html>
 
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>

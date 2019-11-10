@@ -3,6 +3,9 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<!DOCTYPE html>
+
+<html>
   <h2>User's Home</h2>
   <h2>{{ user.get_full_name }}</h2>
 <ul>
@@ -14,6 +17,16 @@
   {{ form.as_p }}
   <button type="submit">Add Group</button>
 </form>
-
+<div class="row">
+  <div class="two-thirds column alpha">
+    <div>{% include "tableofactionitems.html" %}</div>
+  </div>
+  <div class="one-third column omega">
+    <div>{% include "tableofactionitems.html" %}</div>
+  </div>
+</div>
 {% endblock %}
+
+
+</html>
  
