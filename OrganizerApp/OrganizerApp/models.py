@@ -32,4 +32,4 @@ def save_user_profile(sender, instance, **kwargs):
 # def my_handler(sender, instance, created, **kwargs):
 #         notify.send(instance, verb='was saved')
 
-post_save.connect(my_handler, sender=User)
+# post_save.connect(my_handler, sender=User)
