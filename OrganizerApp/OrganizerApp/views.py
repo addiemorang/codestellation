@@ -63,4 +63,7 @@ class GroupView(TemplateView):
     template_name = "group.html"
 
 def profile(request):
-    return render('profile.html')
+    return render(request, 'profile.html')
+
+def login(request):
+    return render(request, 'login.html')
