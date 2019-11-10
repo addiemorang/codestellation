@@ -3,9 +3,12 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
-from django.views.generic import TemplateView  # Import TemplateView
-from django.views.generic.base import TemplateView
-
+from django.views.generic import TemplateView
+from django.db.models.signals import post_save
+from notifications.signals import notify
+from django.contrib.auth import get_user_model
+from django.contrib import messages
+from django.db import models
 
 
 class HomePageView(TemplateView):
@@ -18,6 +21,17 @@ class HomePageView(TemplateView):
                 group = form.save()
                 group.save()
                 return redirect('home')
+
+
+    # def notify_login():
+    #     user = models.ForeignKey(
+    #           get_user_model(),
+    #           on_delete=models.CASCADE
+    #           )
+    #     print(type(user))
+        #notify.send(User, recipient=User, verb='you have logged in.')
+
+    # notify_login()
 
 def signup(request):
     if request.method == 'POST':
@@ -39,6 +53,7 @@ def signup(request):
         user = User.objects.get(pk=user_id)
         user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
         user.save()
+
 
 
 
