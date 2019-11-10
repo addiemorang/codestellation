@@ -1,6 +1,10 @@
+
 {% load static %}
+
+{% block content %}
+<!DOCTYPE html>
 <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
-  rel="stylesheet">
+    rel="stylesheet">
 
 <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -21,58 +25,24 @@
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-{% block content %}
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-      <div class="card card-login py-4">
-        <form class="form-login" method="" action="">
-          <div class="card-header card-header-primary text-center">
-            <h4 class="card-title">Welcome</h4>
-            {% csrf_token %}
-            <!-- {{ form.as_p }} -->
-          </div>
-          <div class="card-body px-4 pb-4 pt-2">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="ion-ios-contact"></i>
-                </span>
-              </div>
-              <!-- <div class="form-control" placeholder="Username"> -->
-                  {{ form.username }}
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="ion-ios-lock"></i>
-                </span>
-              </div>
-              <!-- <div class="form-control" placeholder="Password..."> -->
-                {{ form.password }}
-            </div>
-          </div>
-          <div class="footer text-center">
-            <button class="btn btn-white" type="submit">Login</button>
-            <!-- <a href="#" class="btn btn-white">Get Started</a> -->
-          </div>
-        </form>
-      </div>
+<div class="col-md-4 text-center">
+    <div class="image-wrap">
+        <img src="{% static 'images/image-3.jpg' %}" alt="Thumbnail Image"
+            class="img-raised rounded-circle thumbnail img-fluid image">
+        <div class="text">
+            <div class="img" style="background-image: url(images/person.jpg);"></div>
+            <span class="position">Username</span>
+        </div>
     </div>
-  </div>
-{% endblock %}
-<!-- 
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-  </tr>
-  <tr> -->
     
-  <!-- <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form> -->
+</div>
+<div>{% include "tableofactionitems.html" %}</div>>
 
+
+{% endblock %}
+
+
+</html>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>

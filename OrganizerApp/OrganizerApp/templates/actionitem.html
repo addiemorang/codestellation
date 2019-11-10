@@ -1,6 +1,7 @@
 {% load static %}
+<!DOCTYPE html> 
 <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
-  rel="stylesheet">
+    rel="stylesheet">
 
 <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -21,57 +22,29 @@
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-{% block content %}
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-      <div class="card card-login py-4">
-        <form class="form-login" method="" action="">
-          <div class="card-header card-header-primary text-center">
-            <h4 class="card-title">Welcome</h4>
-            {% csrf_token %}
-            <!-- {{ form.as_p }} -->
-          </div>
-          <div class="card-body px-4 pb-4 pt-2">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="ion-ios-contact"></i>
-                </span>
-              </div>
-              <!-- <div class="form-control" placeholder="Username"> -->
-                  {{ form.username }}
+<div class = "container card-styles" >
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body pb-5 px-4">
+                <actionitemtitle class="card-title">Action Item Title</actionitemtitle> <a href="#" class="btn btn-info">Edit</a>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content. A small river named
+                    Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <table>
+                    <tr>
+                        <th>Status</th>
+                        <th>Due</th>
+                        <th>Assigned To</th>
+                    </tr>
+                    <tr>
+                        <td>In Progress</td>
+                        <td>11/26/19</td>
+                        <td>Lucy Wingard</td>
+                    </tr>
+                </table>
             </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="ion-ios-lock"></i>
-                </span>
-              </div>
-              <!-- <div class="form-control" placeholder="Password..."> -->
-                {{ form.password }}
-            </div>
-          </div>
-          <div class="footer text-center">
-            <button class="btn btn-white" type="submit">Login</button>
-            <!-- <a href="#" class="btn btn-white">Get Started</a> -->
-          </div>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
-{% endblock %}
-<!-- 
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-  </tr>
-  <tr> -->
-    
-  <!-- <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form> -->
+</div>
 
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>

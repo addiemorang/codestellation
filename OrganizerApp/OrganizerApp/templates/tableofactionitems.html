@@ -1,6 +1,9 @@
 {% load static %}
+
+{% block content %}
+<!DOCTYPE html>
 <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
-  rel="stylesheet">
+    rel="stylesheet">
 
 <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -21,57 +24,26 @@
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-{% block content %}
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-      <div class="card card-login py-4">
-        <form class="form-login" method="" action="">
-          <div class="card-header card-header-primary text-center">
-            <h4 class="card-title">Welcome</h4>
-            {% csrf_token %}
-            <!-- {{ form.as_p }} -->
-          </div>
-          <div class="card-body px-4 pb-4 pt-2">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="ion-ios-contact"></i>
-                </span>
-              </div>
-              <!-- <div class="form-control" placeholder="Username"> -->
-                  {{ form.username }}
+<section class="ftco-section" id="notifications">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="heading-section mb-4">Notifications</h2>
+                <div >
+                    {% include "actionitem.html" %}
+                </div>
+                <div>
+                    {% include "actionitem.html" %}
+                </div>
+                <div>
+                    {% include "actionitem.html" %}
+                </div>
             </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="ion-ios-lock"></i>
-                </span>
-              </div>
-              <!-- <div class="form-control" placeholder="Password..."> -->
-                {{ form.password }}
-            </div>
-          </div>
-          <div class="footer text-center">
-            <button class="btn btn-white" type="submit">Login</button>
-            <!-- <a href="#" class="btn btn-white">Get Started</a> -->
-          </div>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
+</section>
+
 {% endblock %}
-<!-- 
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-  </tr>
-  <tr> -->
-    
-  <!-- <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form> -->
 
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>

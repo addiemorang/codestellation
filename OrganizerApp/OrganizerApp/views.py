@@ -45,3 +45,7 @@ def signup(request):
 
 class SampleView(TemplateView):
     template_name = "index.html"
+
+
+class ProfileView(TemplateView):
+    template_name = "profile.html"
