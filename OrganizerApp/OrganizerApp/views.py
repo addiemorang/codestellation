@@ -14,13 +14,13 @@ from django.db import models
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-    def create_group(request):
-        if request.method == 'POST':
-            form = GroupForm(request.POST)
-            if form.is_valid():
-                group = form.save()
-                group.save()
-                return redirect('home')
+    # def create_group(request):
+    #     if request.method == 'POST':
+    #         form = GroupForm(request.POST)
+    #         if form.is_valid():
+    #             group = form.save()
+    #             group.save()
+    #             return redirect('home')
 
 
     # def notify_login():
@@ -55,7 +55,11 @@ def signup(request):
         user.save()
 
 
-
+class CalendarView(TemplateView):
+    template_name = "calendars.html"
+    # if request.method == 'POST':
+    #     form = GroupForm(request.POST)
+    #     if form.is_valid():
 
 
 class SampleView(TemplateView):
