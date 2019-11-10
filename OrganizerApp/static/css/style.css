@@ -3457,8 +3457,8 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
+  margin-right: 5rem;
+  font-size: 15rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -8907,8 +8907,8 @@ h1, h2, h3, h4, h5,
   padding-top: .4rem;
   padding-bottom: .4rem; }
   .navbar-wrap .navbar-brand {
-    font-weight: 400;
-    font-size: 20px; }
+    font-weight: 500;
+    font-size: 30px; }
   .navbar-wrap.bg-primary {
     background: #64c4ed !important; }
   .navbar-wrap.bg-primary .navbar-brand, .navbar-wrap.bg-success .navbar-brand, .navbar-wrap.bg-warning .navbar-brand, .navbar-wrap.bg-secondary .navbar-brand, .navbar-wrap.bg-info .navbar-brand, .navbar-wrap.bg-danger .navbar-brand, .navbar-wrap.bg-dark .navbar-brand, .navbar-wrap.bg-transparent .navbar-brand {
@@ -8920,7 +8920,7 @@ h1, h2, h3, h4, h5,
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 25px;
     letter-spacing: .1em;
     outline: none; }
     .navbar-wrap.bg-primary .navbar-toggler span, .navbar-wrap.bg-success .navbar-toggler span, .navbar-wrap.bg-warning .navbar-toggler span, .navbar-wrap.bg-secondary .navbar-toggler span, .navbar-wrap.bg-info .navbar-toggler span, .navbar-wrap.bg-danger .navbar-toggler span, .navbar-wrap.bg-dark .navbar-toggler span, .navbar-wrap.bg-transparent .navbar-toggler span {
@@ -8933,7 +8933,7 @@ h1, h2, h3, h4, h5,
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
     position: relative;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 500; }
     .navbar-wrap.bg-primary .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-success .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-warning .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-secondary .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-info .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-danger .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-dark .navbar-nav .nav-item .nav-link, .navbar-wrap.bg-transparent .navbar-nav .nav-item .nav-link {
       color: rgba(255, 255, 255, 0.7);

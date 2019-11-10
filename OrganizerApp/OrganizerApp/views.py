@@ -39,9 +39,9 @@ def signup(request):
         user = User.objects.get(pk=user_id)
         user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
         user.save()
-def test_template(request):
-    return render(request, 'index.html')
 
 
-class HomePageView(TemplateView):
+
+
+class SampleView(TemplateView):
     template_name = "index.html"

@@ -3365,7 +3365,7 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem; }
+  padding: 3rem 5rem; }
   .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
   .nav-link.disabled {
@@ -3409,7 +3409,8 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  text-align: center; }
+  text-align: center; 
+  font-size: 15pt;  }
 
 .nav-justified .nav-item {
   -ms-flex-preferred-size: 0;
@@ -8907,8 +8908,8 @@ h1, h2, h3, h4, h5,
   padding-top: .4rem;
   padding-bottom: .4rem; }
   .navbar-wrap .navbar-brand {
-    font-weight: 400;
-    font-size: 20px; }
+    font-weight: 500;
+    font-size: 30px; }
   .navbar-wrap.bg-primary {
     background: #64c4ed !important; }
   .navbar-wrap.bg-primary .navbar-brand, .navbar-wrap.bg-success .navbar-brand, .navbar-wrap.bg-warning .navbar-brand, .navbar-wrap.bg-secondary .navbar-brand, .navbar-wrap.bg-info .navbar-brand, .navbar-wrap.bg-danger .navbar-brand, .navbar-wrap.bg-dark .navbar-brand, .navbar-wrap.bg-transparent .navbar-brand {
