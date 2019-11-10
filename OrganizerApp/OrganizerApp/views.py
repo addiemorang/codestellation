@@ -3,10 +3,11 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
-from OrganizerApp.forms import GroupForm
+from OrganizerApp.forms import GroupForm, DocForm
 from django.views.generic import TemplateView  # Import TemplateView
 from django.views.generic.base import TemplateView
 from django.contrib.auth import login as auth_login
+from OrganizerApp.Backend.analyze_agenda import main as analyze
 
 from django.shortcuts import redirect
 
@@ -76,7 +77,26 @@ class SampleView(TemplateView):
 #     template_name = "profile.html"
 
 class GroupView(TemplateView):
+    # list = [['Email Prof. Antonella', '@amorang', '11/30/19'],
+    #         ['Print out flyers', '@lwingard', '11/26/19'],
+    #         ['Create agenda', '@ellie', '11/20/19'],
+    #         ]
+    # action1 = render(request, 'actionitem.html', {'desciption': list[0][0], 'assignee': list[0][1], 'date': list[0][2]})
+    # action2 = render(request, 'actionitem.html', {'desciption': list[1][0], 'assignee': list[1][1], 'date': list[1][2]})
+    # action3 = render(request, 'actionitem.html', {'desciption': list[2][0], 'assignee': list[2][1], 'date': list[2][2]})
+    #
+    #
+    # return render(request, group.html, {'action1': action1,'action2': action2,'action3': action3})
     template_name = "group.html"
+
+    def req_analyze(request):
+        if request.method == 'POST':
+            form = DocForm(request.POST)
+            if form.is_valid():
+                analyze(request.document_id)
+
+            else:
+                group
 
 def profile(request):
     return render(request, 'profile.html')
