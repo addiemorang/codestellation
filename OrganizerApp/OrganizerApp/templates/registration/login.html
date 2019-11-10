@@ -26,10 +26,10 @@
   <div class="row justify-content-center">
     <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
       <div class="card card-login py-4">
-        <form class="form-login" method="" action="">
+
+        <form class="form-login" method="post" action="">
           <div class="card-header card-header-primary text-center">
             <h4 class="card-title">Welcome</h4>
-            {% csrf_token %}
             <!-- {{ form.as_p }} -->
           </div>
           <div class="card-body px-4 pb-4 pt-2">
@@ -40,6 +40,7 @@
                 </span>
               </div>
               <!-- <div class="form-control" placeholder="Username"> -->
+                {% csrf_token %}
                   {{ form.username }}
             </div>
             <div class="input-group mb-3">
@@ -49,24 +50,26 @@
                 </span>
               </div>
               <!-- <div class="form-control" placeholder="Password..."> -->
+                {% csrf_token %}
                 {{ form.password }}
             </div>
           </div>
           <div class="footer text-center">
             <button class="btn btn-white" type="submit">Login</button>
-            <!-- <a href="#" class="btn btn-white">Get Started</a> -->
+
+            <!-- <a class="btn btn-white">Get Started</a> -->
           </div>
         </form>
       </div>
     </div>
   </div>
 {% endblock %}
-<!-- 
+<!--
   <td>{{ form.username.label_tag }}</td>
   <td>{{ form.username }}</td>
   </tr>
   <tr> -->
-    
+
   <!-- <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
