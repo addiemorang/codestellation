@@ -22,10 +22,7 @@ class Profile(models.Model):
 
     def addToGroup(group):
         groups.add(group)
-        
-class Group(models.Model):
-    name = models.TextField(max_length=80, unique=True)
-    members = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
 
 @receiver(post_save, sender=User)

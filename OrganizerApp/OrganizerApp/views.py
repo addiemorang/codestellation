@@ -6,6 +6,7 @@ from OrganizerApp.forms import SignUpForm
 from OrganizerApp.forms import GroupForm
 from django.views.generic import TemplateView  # Import TemplateView
 from django.views.generic.base import TemplateView
+from django.contrib.auth import login as auth_login
 
 from django.shortcuts import redirect
 
@@ -26,7 +27,7 @@ def signup(request):
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
-            login(request, user)
+            auth_login(request, user)
             return redirect('home')
     else:
         form = SignUpForm()
