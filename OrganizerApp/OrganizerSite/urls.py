@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
@@ -26,7 +27,8 @@ urlpatterns = [
     #path('admin/', admin.site.urls),
     url(r'^login/$', auth_views.LoginView.as_view(template_name = 'login.html'), name='login'),
     url(r'^signup/$', views.signup, name='signup'),
-    url(r'^index/$', views.HomePageView.as_view(), name='index')
+    url(r'^index/$', views.HomePageView.as_view(), name='index'),
+    url(r'^home/$', views.HomePageView.as_view(), name='home')
     #url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 ]
 
