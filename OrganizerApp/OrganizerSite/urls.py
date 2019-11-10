@@ -22,6 +22,8 @@ from django.conf import settings
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from OrganizerApp import views
+from django.conf.urls import include
+import notifications.urls
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -31,6 +33,7 @@ urlpatterns = [
     url(r'^home/$', views.HomePageView.as_view(), name='home'),
     url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
     # url(r'^profile/$', views.profile, name='profile'),
+    url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     #url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 ]
 
