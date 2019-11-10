@@ -1,10 +1,27 @@
 {% extends 'base.html' %}
-
-<div class="flex-container" style="justify-content: space-between;">
+{% load static %}
+{% block content %}
+<div class="row" style="flex-direction: row;">
     <div class="col-md-8">
-        <div class="flex-container"></div>
+        <div class="row" style="flex-direction: column;">
+            <div>Activity</div>
+            <div>Not Started In Progress On Hold Complete</div>
+            <div class="row" style="flex-direction: row;">
+                <div>{% include "tableofactionitems.html" %}</div>
+                <div>{% include "tableofactionitems.html" %}</div>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <div class="flex-container" style="flex-direction: column;"></div>
+        <div class="row" style="flex-direction: column;"> 
+            <div class="row" style="flex-direction: column;">
+                <h5>Unassigned Action Items</h5>
+                <div>{% include "tableofactionitems.html" %}</div>
+            </div>
+            <div>
+                upload agenda here
+            </div>
+        </div>
     </div>
 </div>
+{% endblock %}

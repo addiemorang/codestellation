@@ -58,3 +58,6 @@ class SampleView(TemplateView):
 
 class ProfileView(TemplateView):
     template_name = "profile.html"
+
+class GroupView(TemplateView):
+    template_name = "group.html"
