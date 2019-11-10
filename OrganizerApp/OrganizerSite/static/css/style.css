@@ -9409,6 +9409,7 @@ h1, h2, h3, h4, h5,
 
 @media (min-width: 992px) {
   .card-styles {
+    max-width: 1140px;
     } }
 
 #cards .card {

@@ -6,6 +6,9 @@ from OrganizerApp.forms import SignUpForm
 from django.views.generic import TemplateView  # Import TemplateView
 from django.views.generic.base import TemplateView
 
+from django.shortcuts import redirect
+
+from django.http import HttpResponseRedirect
 
 
 class HomePageView(TemplateView):
@@ -41,7 +44,8 @@ def signup(request):
         user.save()
 
 
-
+# def profile(request):
+#     return redirect('profile.html')
 
 class SampleView(TemplateView):
     template_name = "index.html"
