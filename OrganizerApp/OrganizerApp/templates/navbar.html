@@ -2,24 +2,25 @@
 
 <div class="px-0 bg-warning navbar-wrap mb-2">
     <div class="container">
-        <div class="row">
+        <div class="row" style="flex-direction:column; justify-content: center;">
             <div class="col-md-12">
-                <nav class="navbar px-0 navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">Organizer App</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
-                        aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <nav class="navbar px-0 navbar-expand-lg navbar-light" style="justify-content: center;">
+                        <a class="navbar-brand" href="#" style="font-size: 25pt;">Organizer App</a>
+                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+                             aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="oi oi-menu"></span>
                     </button>
-
+            </div>
+            <div class = "col-md-12">
                     <ul class="nav nav-pills nav-fill d-md-flex d-block">
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-3" data-toggle="tab" href="#home"><span class="ion-ios-home mr-2"></span> Calendars</a>
+                        <li class="nav-item">
+                            <a href="{% url 'calendar' %}" class="btn btn-warning btn-link" role="button" style="font-size: 20pt; color:white"><span class="ion-ios-home mr-2"></span>Calendars</a>
                         </li>
-                        <li class="nav-item text-left">
-                            <a href="{% url 'profile' %}" class="nav-link py-3" data-toggle="tab"  role="button"><span class="ion-ios-person mr-2"></span> Profile</a>
+                        <li class="nav-item">
+                            <a href="{% url 'profile' %}" class="btn btn-warning btn-link" role="button" style="font-size: 20pt; color:white"><span class="ion-ios-person mr-2"></span>Profile</a>
                         </li>
-                        <li class="nav-item text-left">
-                            <a class="nav-link py-3" data-toggle="tab" href="#menu2"><span class="ion-ios-mail mr-2"></span> Action Items</a>
+                        <li class="nav-item">
+                            <a href="{% url 'groups' %}" class="btn btn-warning btn-link" role="button" style="font-size: 20pt; color:white"><span class="ion-ios-mail mr-2"></span>Groups</a>
                         </li>
                     </ul>
                 </nav>
