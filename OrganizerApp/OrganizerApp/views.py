@@ -61,3 +61,6 @@ class ProfileView(TemplateView):
 
 class GroupView(TemplateView):
     template_name = "group.html"
+
+def profile(request):
+    return render('profile.html')

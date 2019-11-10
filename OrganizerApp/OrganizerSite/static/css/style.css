@@ -4838,7 +4838,7 @@ a.close.disabled {
   align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: 0.3rem;
@@ -9391,9 +9391,8 @@ h1, h2, h3, h4, h5,
         color: #64c4ed; }
 
 .form-login .card-body .input-group .input-group-prepend .input-group-text {
-  width: 40px;
   border: none;
-  padding: 0; }
+  padding: 10; }
   .form-login .card-body .input-group .input-group-prepend .input-group-text i {
     color: #64c4ed;
     margin: 0 auto; }

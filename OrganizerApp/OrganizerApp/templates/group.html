@@ -20,9 +20,37 @@
             <div class="row" style="flex-direction: column; justify-content: center;margin-left: 0; margin-right: 0; text-align: center;">
                 <h2>Unassigned Action Items</h2>
                 <div>{% include "tableofactionitems.html" %}</div>
-            </div>
-            <div>
-                upload agenda here
+                <button type="button" class="btn btn-outline-primary" style = "width: 50%;
+                                    margin-left: 25%;
+                                    margin-top: 20;
+                                    font-size: 20;
+                                    height: 20;
+                                    padding: 1;" data-toggle="modal" data-target="#exampleModalCenter">
+                    Upload Meeting Minutes
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Select a file to upload</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Upload meeting minutes here and our software will extract and create Action Items that can be assigned to any member of your 
+                                    group. Please make sure that Action Items are recorded in your file in the following format: 
+                                        "ACTION ITEM: Due Date (MM/DD/YY), description"
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-info">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
