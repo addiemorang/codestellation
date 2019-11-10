@@ -201,10 +201,20 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
+      margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 4px;
+    height: 48px !important;
+    padding: 0 15px;
+    line-height: 1.5;
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    box-shadow: none !important;
+    border-width: 0; }
 
 button,
 input {
