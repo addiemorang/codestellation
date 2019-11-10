@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^home/$', views.HomePageView.as_view(), name='home'),
     url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
     # url(r'^profile/$', views.profile, name='profile'),
-    url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
+    # url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     #url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 ]
 

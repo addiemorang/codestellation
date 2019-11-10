@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'OrganizerSite',
     'OrganizerApp',
-    'notifications',
+    # 'notifications',
 ]
 
 MIDDLEWARE = [
