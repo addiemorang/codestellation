@@ -12,9 +12,14 @@ from django.shortcuts import redirect
 
 from django.http import HttpResponseRedirect
 
+group_names = []
+
+users_groups = {'lw': ['bcj']}
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
+
+
 
 
 def signup(request):
@@ -38,9 +43,15 @@ def signup(request):
         user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
         user.save()
 
-def create_group(request):
-    #if request.method == 'POST':
-    return redirect('login')
+def creategroup(request):
+    if request.method == 'POST':
+        form = GroupForm(request.POST)
+        if form.is_valid():
+            group_name = form.cleaned_data.get('group_name')
+            description = form.cleaned_data.get('description')
+            users_groups[request.user].append(group_name) 
+            group_names.append[group_name]
+    return render('groups', group_names)
         # #name = request.POST.get('name')
         # form = GroupForm(request.POST)
         # if form.is_valid():

@@ -2,10 +2,11 @@
 {% load static %}
 {% block content %}
 <div class="row" style="flex-direction: row;margin-left: 0; margin-right: 0;background-color: #f8f9fa;">
-    <div>{% include "groupcard.html" %}</div>
-    <div>{% include "groupcard.html" %}</div>
-    <div>{% include "groupcard.html" %}</div>
-    <div>{% include "groupcard.html" %}</div>
-    <div>{% include "groupcard.html" %}</div>
+    <div class="col-md-6" style="justify-content: center; width: 80%;">
+        <div>{% include "groupcard.html" %}</div>
+    </div>
+    <div class="col-md-6" style="justify-content: center; ">
+        <div>{% include "creategroup.html" %}</div>
+    </div>
 </div>
 {% endblock %}
