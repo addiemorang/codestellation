@@ -29,7 +29,7 @@
 
         <form class="form-login" method="post" action="">
           <div class="card-header card-header-primary text-center">
-            <h4 class="card-title">Welcome</h4>
+            <h2 class="card-title">Welcome</h2>
             <!-- {{ form.as_p }} -->
           </div>
           <div class="card-body px-4 pb-4 pt-2">
@@ -41,7 +41,7 @@
               </div>
               <!-- <div class="form-control" placeholder="Username"> -->
                 {% csrf_token %}
-                  {{ form.username }}
+                {{ form.username }}
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
@@ -56,9 +56,13 @@
           </div>
           <div class="footer text-center">
             <button class="btn btn-white" type="submit">Login</button>
-
-            <!-- <a class="btn btn-white">Get Started</a> -->
           </div>
+          <div class="footer text-center" style="padding-top: 5;">
+            <span class="fill-control-description" style="color: white; font-size: 15pt;">Not a member?</span>
+            <a href="{% url 'signup' %}" class="btn btn-warning btn-link" role="button" style="font-size: 15pt;">Sign up today</a>
+          </div>
+            
+            <!-- <a class="btn btn-white">Get Started</a> -->
         </form>
       </div>
     </div>

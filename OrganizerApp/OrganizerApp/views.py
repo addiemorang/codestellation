@@ -10,28 +10,11 @@ from django.views.generic.base import TemplateView
 from django.shortcuts import redirect
 
 from django.http import HttpResponseRedirect
-from django.views.generic import TemplateView
-from django.db.models.signals import post_save
-from notifications.signals import notify
-from django.contrib.auth import get_user_model
-from django.contrib import messages
-from django.db import models
 
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-
-
-    # def notify_login():
-    #     user = models.ForeignKey(
-    #           get_user_model(),
-    #           on_delete=models.CASCADE
-    #           )
-    #     print(type(user))
-        #notify.send(User, recipient=User, verb='you have logged in.')
-
-    # notify_login()
 
 def signup(request):
     if request.method == 'POST':
@@ -73,10 +56,25 @@ class CalendarView(TemplateView):
     #     form = GroupForm(request.POST)
     #     if form.is_valid():
 
-
 class SampleView(TemplateView):
     template_name = "index.html"
 
 
 class ProfileView(TemplateView):
     template_name = "profile.html"
+
+class GroupView(TemplateView):
+    template_name = "group.html"
+
+def profile(request):
+    return render(request, 'profile.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def group(request):
+    return render(request, 'group.html')
+
+
+def groups(request):
+    return render(request, 'groups.html')

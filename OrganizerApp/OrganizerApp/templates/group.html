@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row" style="flex-direction: row;margin-left: 0; margin-right: 0;background-color: #f8f9fa;">
+    <div class="col-md-6">
+        <div class="row" style="flex-direction: column;margin-left: 0; margin-right: 0; justify-content: center;">
+            <h1 style="text-align: center;">Group Name's Activity</h1>
+            <div class="row" style="flex-direction: row;  padding-bottom: 15; width: 70%; margin-left: 15%;">
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">Not Started</button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">In Progress</button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">On Hold</button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 5;">Completed</button>
+            </div>
+           
+            <div>{% include "tableofactionitems.html" %}</div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row" style="flex-direction: column;margin-left: 0; margin-right: 0;"> 
+            <div class="row" style="flex-direction: column; justify-content: center;margin-left: 0; margin-right: 0; text-align: center;">
+                <h2>Unassigned Action Items</h2>
+                <div>{% include "tableofactionitems.html" %}</div>
+                <button type="button" class="btn btn-outline-primary" style = "width: 50%;
+                                    margin-left: 25%;
+                                    margin-top: 20;
+                                    font-size: 20;
+                                    height: 20;
+                                    padding: 1;" data-toggle="modal" data-target="#exampleModalCenter">
+                    Upload Meeting Minutes
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Select a file to upload</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Upload meeting minutes here and our software will extract and create Action Items that can be assigned to any member of your 
+                                    group. Please make sure that Action Items are recorded in your file in the following format: 
+                                        "ACTION ITEM: Due Date (MM/DD/YY), description"
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-info">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,6 +1,4 @@
 {% load static %}
-
-{% block content %}
 <!DOCTYPE html>
 <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
     rel="stylesheet">
@@ -24,25 +22,18 @@
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<section class="ftco-section" id="notifications">
-    <div class="container">
-        <div class="row text-center m-0" style="max-width: 100%">
-            <div class="col-md-12">
-                <div >
-                    {% include "actionitem.html" %}
-                </div>
-                <div>
-                    {% include "actionitem.html" %}
-                </div>
-                <div>
-                    {% include "actionitem.html" %}
-                </div>
+<div class="container card-styles">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body pb-5 px-4">
+                <a href="{% url 'group' %}" class="btn btn-dark btn-link" style="font-size: 25; font-weight:400" role="button">Group Title</a>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content. A small
+                    river named
+                    Duden flows by their place and supplies it with the necessary regelialia.</p>
             </div>
         </div>
     </div>
-</section>
-
-{% endblock %}
+</div>
 
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>

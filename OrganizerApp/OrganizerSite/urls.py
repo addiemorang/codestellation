@@ -22,8 +22,6 @@ from django.conf import settings
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from OrganizerApp import views
-from django.conf.urls import include
-import notifications.urls
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -31,11 +29,12 @@ urlpatterns = [
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^index/$', views.SampleView.as_view(), name='index'),
     url(r'^home/$', views.HomePageView.as_view(), name='home'),
-    url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
-    url(r'^calendar/$', views.CalendarView.as_view(), name='profile'),
-    url(r'^creategroup/$', views.create_group),
+    url(r'^profile/$', views.profile, name='profile'),
+    url(r'^calendar/$', views.CalendarView.as_view(), name='calendar'),
+    url(r'^group/$', views.group, name='group'),
+    url(r'^groups/$', views.groups, name='groups'),
     # url(r'^profile/$', views.profile, name='profile'),
-    url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
+    # url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     #url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 ]
 

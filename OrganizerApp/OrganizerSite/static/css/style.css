@@ -500,9 +500,7 @@ pre {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  flex-wrap: wrap; }
 
 .no-gutters {
   margin-right: 0;
@@ -2177,7 +2175,6 @@ fieldset:disabled a.btn {
   background-color: #03A9F4;
   border-color: #03A9F4;
   margin-left: 90;
-  height: 10;
   line-height: 0; }
   .btn-info:hover {
     color: #fff;
@@ -4841,7 +4838,7 @@ a.close.disabled {
   align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: 0.3rem;
@@ -6797,7 +6794,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important; }
+  padding-bottom: 1.5rem !important; }
 
 .pl-5,
 .px-5 {
@@ -8196,7 +8193,6 @@ h1, h2, h3, h4, h5,
   font-weight: 400; }
 
 .ftco-section {
-  padding: 3em 0;
   position: relative; }
   .ftco-section.ftco-section-2 {
     padding: 6em 0; }
@@ -9395,9 +9391,8 @@ h1, h2, h3, h4, h5,
         color: #64c4ed; }
 
 .form-login .card-body .input-group .input-group-prepend .input-group-text {
-  width: 40px;
   border: none;
-  padding: 0; }
+  padding: 10; }
   .form-login .card-body .input-group .input-group-prepend .input-group-text i {
     color: #64c4ed;
     margin: 0 auto; }
@@ -9409,7 +9404,7 @@ h1, h2, h3, h4, h5,
 
 @media (min-width: 992px) {
   .card-styles {
-    max-width: 1140px;
+    max-width: 510px;
     } }
 
 #cards .card {
