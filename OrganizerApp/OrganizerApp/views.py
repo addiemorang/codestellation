@@ -3,6 +3,12 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
+from django.views.generic import TemplateView  # Import TemplateView
+from django.views.generic.base import TemplateView
+
+from django.shortcuts import redirect
+
+from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.db.models.signals import post_save
 from notifications.signals import notify
@@ -55,6 +61,8 @@ def signup(request):
         user.save()
 
 
+# def profile(request):
+#     return redirect('profile.html')
 class CalendarView(TemplateView):
     template_name = "calendars.html"
     # if request.method == 'POST':
