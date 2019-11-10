@@ -22,8 +22,6 @@ from django.conf import settings
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from OrganizerApp import views
-from django.conf.urls import include
-import notifications.urls
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
