@@ -19,3 +19,9 @@ class  GroupForm(forms.Form):
     class Meta:
         model = Group
         fields = ('name', 'members')
+
+class DocForm(forms.Form):
+    document_id = forms.CharField(label='Group name', max_length=100)
+
+    class Meta:
+        fields = ('document_id')

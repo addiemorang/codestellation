@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+=
 {% block content %}
 <div class="row" style="flex-direction: row;margin-left: 0; margin-right: 0;background-color: #f8f9fa;">
     <div class="col-md-6">
@@ -11,12 +12,12 @@
                 <button type="button" class="btn btn-outline-primary" style="margin: 5;">On Hold</button>
                 <button type="button" class="btn btn-outline-primary" style="margin: 5;">Completed</button>
             </div>
-           
+
             <div>{% include "tableofactionitems.html" %}</div>
         </div>
     </div>
     <div class="col-md-6">
-        <div class="row" style="flex-direction: column;margin-left: 0; margin-right: 0;"> 
+        <div class="row" style="flex-direction: column;margin-left: 0; margin-right: 0;">
             <div class="row" style="flex-direction: column; justify-content: center;margin-left: 0; margin-right: 0; text-align: center;">
                 <h2>Unassigned Action Items</h2>
                 <div>{% include "tableofactionitems.html" %}</div>
@@ -28,7 +29,7 @@
                                     padding: 1;" data-toggle="modal" data-target="#exampleModalCenter">
                     Upload Meeting Minutes
                 </button>
-                
+
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true">
@@ -36,17 +37,32 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle">Select a file to upload</h5>
-                                </button>
+                                <!-- </button> -->
                             </div>
                             <div class="modal-body">
-                                <p>Upload meeting minutes here and our software will extract and create Action Items that can be assigned to any member of your 
-                                    group. Please make sure that Action Items are recorded in your file in the following format: 
-                                        "ACTION ITEM: Due Date (MM/DD/YY), description"
+                                <p>Upload meeting minutes here and our software will extract and create Action Items that can be assigned to any member of your
+                                    group. Please make sure that Action Items are recorded in your file in the following format:
+                                        "Action Items:
+                                        [Description] : @[assigned username], @[assigned username] : DUE [Due Date (MM/DD/YY)]"
                                 </p>
                             </div>
+
+                            <div class="container">
+                              <form method="post" action="" class="form-login">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="border: none; padding: 10; width: auto;">Document ID</span>
+                                </div>
+                                {% csrf_token %}
+                                <input type="text" name="document_id">
+                                <!-- {{ form.document_id}} -->
+                              </div>
+                              </form>
+                            </div>
+
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-info">Save changes</button>
+                                <button type="submit" class="btn btn-info">Submit</button>
                             </div>
                         </div>
                     </div>
