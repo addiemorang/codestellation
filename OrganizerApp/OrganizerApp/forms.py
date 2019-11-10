@@ -15,7 +15,7 @@ class SignUpForm(UserCreationForm):
 
 class  GroupForm(forms.Form):
     name = forms.CharField(label='Group name', max_length=30)
-    
+
     class Meta:
         model = Group
         fields = ('name', 'members')
