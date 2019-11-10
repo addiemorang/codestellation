@@ -3,8 +3,10 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from OrganizerApp.forms import SignUpForm
+from OrganizerApp.forms import GroupForm
 from django.views.generic import TemplateView  # Import TemplateView
 from django.views.generic.base import TemplateView
+from django.contrib.auth import login as auth_login
 
 from django.shortcuts import redirect
 
@@ -14,13 +16,6 @@ from django.http import HttpResponseRedirect
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-    # def create_group(request):
-    #     if request.method == 'POST':
-    #         form = GroupForm(request.POST)
-    #         if form.is_valid():
-    #             group = form.save()
-    #             group.save()
-    #             return redirect('home')
 
 def signup(request):
     if request.method == 'POST':
@@ -32,7 +27,7 @@ def signup(request):
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
-            login(request, user)
+            auth_login(request, user)
             return redirect('home')
     else:
         form = SignUpForm()
@@ -43,9 +38,19 @@ def signup(request):
         user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
         user.save()
 
+def create_group(request):
+    #if request.method == 'POST':
+    return redirect('login')
+        # #name = request.POST.get('name')
+        # form = GroupForm(request.POST)
+        # if form.is_valid():
+        #     group = form.save()
+        #     group.save()
+        #     return redirect('home')
+        # else:
+        #     return redirect('login')
 
-# def profile(request):
-#     return redirect('profile.html')
+
 class CalendarView(TemplateView):
     template_name = "calendars.html"
     # if request.method == 'POST':

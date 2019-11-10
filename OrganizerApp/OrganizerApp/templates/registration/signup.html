@@ -12,38 +12,38 @@
   {% load static %}
   <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
     rel="stylesheet">
-  
+
   <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-  
+
   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-  
+
   <link rel="stylesheet" href="{% static 'css/aos.css' %}">
-  
+
   <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
-  
+
   <link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/nouislider.css' %}">
-  
-  
+
+
   <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
   <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  
+
   {% block content %}
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
         <div class="card card-login py-4">
-  
+
           <form class="form-login" method="post" action="">
             <div class="card-header card-header-primary text-center">
               <h2 class="card-title">Welcome</h2>
               <!-- {{ form.as_p }} -->
             </div>
-              
+
               <div class="card-body px-4 pb-4 pt-2">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -84,6 +84,14 @@
                 {% csrf_token %}
                 {{ form.password1 }}
               </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" style="border: none; padding: 10; width: auto;">Confirm Password</span>
+                </div>
+                <!-- <div class="form-control" placeholder="Password..."> -->
+                {% csrf_token %}
+                {{ form.password2 }}
+              </div>
             </div>
             <div class="footer text-center">
               <button class="btn btn-white" type="submit">Sign Up</button>
@@ -92,7 +100,7 @@
               <span class="fill-control-description" style="color: white; font-size: 15pt;">Already have an account?</span>
               <a href="{% url 'login' %}" class="btn btn-warning btn-link" role="button" style="font-size: 15pt;">Login</a>
             </div>
-            
+
             <!-- <a class="btn btn-white">Get Started</a> -->
           </form>
         </div>
@@ -104,13 +112,13 @@
     <td>{{ form.username }}</td>
     </tr>
     <tr> -->
-  
+
     <!-- <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
       <button type="submit">Login</button>
     </form> -->
-  
+
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
@@ -121,8 +129,7 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'js/aos.js' %}"></script>
-  
+
     <script src="{% static 'js/nouislider.min.js' %}"></script>
     <script src="{% static 'js/moment-with-locales.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
-
