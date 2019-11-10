@@ -17,8 +17,14 @@
   {{ form.as_p }}
   <button type="submit">Add Group</button>
 </form>
-
-<div>{% include "tableofactionitems.html" %}</div>
+<div class="row">
+  <div class="two-thirds column alpha">
+    <div>{% include "tableofactionitems.html" %}</div>
+  </div>
+  <div class="one-third column omega">
+    <div>{% include "tableofactionitems.html" %}</div>
+  </div>
+</div>
 {% endblock %}
 
 

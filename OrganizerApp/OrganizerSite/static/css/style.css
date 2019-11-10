@@ -3808,6 +3808,7 @@ input[type="button"].btn-block {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
+  width: 475;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -9155,6 +9156,7 @@ h1, h2, h3, h4, h5,
   .image.thumbnail {
     border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 10px;
+    margin-right: 80;
     background: #fff; }
   .image.img-raised {
     -webkit-box-shadow: 0px 15px 21px -8px rgba(0, 0, 0, 0.14);
