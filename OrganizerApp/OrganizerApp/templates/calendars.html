@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+<link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' %}"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/nouislider.css' %}">
+
+
+<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block title %}Calendars{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+
+<html>
+  <h2>User's Calendars</h2>
+
+  <h2>{{ user.get_full_name }}</h2>
+<ul>
+  <li>Username: {{ user.username }}</li>
+</ul
+<form action="/action_page.php" style="background-color:#E6E6FA" align="right">
+  <input type="text" name="url" value="" align="right">
+
+  <input type="submit" value="+" >
+</form>
+
+<iframe width=100% height=100% src="https://www.when2meet.com/?8321965-cbJct"></iframe>
+{% endblock %}
+
+
+</html>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+
+<script src="{% static 'js/nouislider.min.js' %}"></script>
+<script src="{% static 'js/moment-with-locales.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
