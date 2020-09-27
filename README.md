@@ -10,3 +10,8 @@ C.Org is a web app created to help community organizers stay organized. On C.Org
 - A user can see their action items and the groups they belong to on their profile
 - Once an action item is completed, the user marks it as done and all members of the group are notifed 
 - Additionally, a user can keep track of all their online scheduling platforms, such as When2Meet, across their groups on one central page
+
+### Demo
+[![C.Org Demo](http://img.youtube.com/vi/gaTuJicySAM/0.jpg)](http://www.youtube.com/watch?v=gaTuJicySAM "C.Org Demo")
+
+### [Check out our full hackathon submission on Devpost](https://devpost.com/software/c-org-42w7c3)
